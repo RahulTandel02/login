@@ -24,6 +24,7 @@ module.exports = async (req, res) => {
         const page = await context.newPage();
 
         await page.goto('https://veenaworld.peoplestrong.com/altLogin.jsf', {waitUntil: 'networkidle'});
+        await page.waitForTimeout(5000);
 
         await page.locator('[id="loginForm:username12"]').click();
         await page.locator('[id="loginForm:username12"]').fill(process.env.USER);
