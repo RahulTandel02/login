@@ -60,10 +60,6 @@ module.exports = async (req, res) => {
         res.end(JSON.stringify({
             error: 'Not found'
         }));
-        return res.send({
-            success: false,
-            error: error.message
-        });
 
     } finally {
         if (browser) {
