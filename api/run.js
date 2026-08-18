@@ -35,11 +35,11 @@ module.exports = async (req, res) => {
 
         await page.getByRole('button', { name: 'Login' }).click();
 
-        await page.waitForTimeout(5000);
+        await page.waitForTimeout(10000);
 
         await page.goto('https://veenaworld.peoplestrong.com/oneweb/#/home');
 
-        await page.waitForTimeout(5000);
+        await page.waitForTimeout(10000);
       
         await page.mouse.click(1000, 188);
   
