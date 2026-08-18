@@ -9,7 +9,7 @@ module.exports = async (req, res) => {
         // const chromiumBinary = await import('@sparticuz/chromium')
         // const chromiumData = chromiumBinary.default;
         browser = await chromium.launch({
-            headless: true,
+            headless: false,
             // args: chromiumData.args,
             // executablePath: await chromiumData.executablePath(),
         });
