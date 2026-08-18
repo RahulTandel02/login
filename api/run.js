@@ -26,11 +26,11 @@ module.exports = async (req, res) => {
         await page.goto('https://veenaworld.peoplestrong.com/altLogin.jsf', {waitUntil: 'networkidle'});
 
         await page.locator('[id="loginForm:username12"]').click();
-        await page.locator('[id="loginForm:username12"]').fill('rahul.tandel@veenaworld.com');
+        await page.locator('[id="loginForm:username12"]').fill(process.env.USER);
 
         await page.locator('[id="loginForm:username12"]').press('Tab');
 
-        await page.locator('[id="loginForm:password"]').fill('Dahanu@123456');
+        await page.locator('[id="loginForm:password"]').fill(process.env.PASS);
 
         await page.getByRole('button', { name: 'Login' }).click();
 
